@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 15;
+  --background-end-rgb: 20, 20, 25;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  overflow-y: scroll;
+}
+
+/* Mesh Gradient Background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    radial-gradient(ellipse 50% 50% at 20% 20%, rgba(120, 111, 226, 0.2), transparent),
+    radial-gradient(ellipse 50% 50% at 80% 20%, rgba(226, 111, 111, 0.2), transparent),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(111, 226, 186, 0.2), transparent),
+    radial-gradient(ellipse 50% 50% at 80% 80%, rgba(226, 111, 221, 0.2), transparent);
+  z-index: -1;
+  animation: bg-animation 15s ease-in-out infinite;
+}
+
+@keyframes bg-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Glassmorphism Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
