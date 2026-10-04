@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Play, X, ExternalLink, CalendarCheck, ShoppingBag, Box } from "lucide-react";
+import { ArrowRight, Play, X, ExternalLink, CalendarCheck, ShoppingBag, Box, MessageCircle } from "lucide-react";
 import { PROJECTS, Project } from "../data/projectsData";
 
 interface HeroSectionProps {
@@ -96,7 +96,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectProject }) => 
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2545FF] opacity-40" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2545FF]" />
             </span>
-            <span className="text-[#5A6472]">Accettiamo progetti per questo trimestre</span>
+            <span className="text-[#5A6472]">Disponibile per nuovi progetti a Messina e online</span>
           </a>
         </motion.div>
 
@@ -108,14 +108,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectProject }) => 
           className="max-w-5xl mr-auto text-left space-y-5"
         >
           <h1 className="text-5xl sm:text-7xl lg:text-[96px] font-medium tracking-[-0.065em] leading-[0.94] text-[#20271F]">
-            Siti web che portano
+            Siti web per attività di Messina
             <br className="hidden sm:block" />
             {" "}
-            <span className="text-[#315B46] italic font-normal">clienti — non solo complimenti.</span>
+            <span className="text-[#315B46] italic font-normal">che portano clienti — non solo complimenti.</span>
           </h1>
 
           <p className="text-base sm:text-lg text-[#62695F] max-w-2xl mr-auto leading-relaxed">
-            Progettiamo e realizziamo il tuo sito web in pochi giorni, non mesi. Prenotazioni online, negozio e-commerce,
+            Progetto e realizzo il tuo sito web in pochi giorni, non mesi. Prenotazioni online, negozio e-commerce,
             perfino visualizzazioni 3D — tutto funzionante dal primo giorno, da{" "}
             <span className="text-[#20271F] font-semibold">300 € a prezzo fisso</span>.
           </p>
@@ -130,21 +130,30 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectProject }) => 
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="#projects"
-              className="btn-press inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-transparent border border-[#BFC2B5] text-[#20271F] text-sm font-semibold hover:border-[#0A0D12] transition-colors"
+              href="https://wa.me/393510000000?text=Ciao,%20vorrei%20informazioni%20per%20un%20sito%20web%20a%20Messina"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-press inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#25D366] text-white text-sm font-semibold hover:bg-[#20ba59] transition-colors shadow-sm"
             >
-              Guarda i siti dei nostri clienti
+              <MessageCircle className="w-4 h-4 fill-white" />
+              <span>WhatsApp: 351 000 0000</span>
+            </a>
+            <a
+              href="#projects"
+              className="btn-press inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-transparent border border-[#BFC2B5] text-[#20271F] text-sm font-semibold hover:border-[#0A0D12] transition-colors"
+            >
+              Guarda i progetti dimostrativi
             </a>
             <button
               type="button"
               onClick={() => setIsShowreelOpen(true)}
-              className="btn-press inline-flex items-center gap-2 px-5 py-3 rounded-lg text-[#62695F] hover:text-[#20271F] text-sm font-semibold transition-colors cursor-pointer"
-              aria-label="Guarda lo showreel di Studio Strada"
+              className="btn-press inline-flex items-center gap-2 px-4 py-3 rounded-lg text-[#62695F] hover:text-[#20271F] text-sm font-semibold transition-colors cursor-pointer"
+              aria-label="Guarda lo showreel dimostrativo"
             >
               <span className="w-6 h-6 rounded-full bg-[#E3E9DF] flex items-center justify-center">
                 <Play className="w-3 h-3 fill-[#2545FF] text-[#315B46]" />
               </span>
-              Guardalo in azione (28s)
+              Demo video (28s)
             </button>
           </div>
         </motion.div>

@@ -30,7 +30,7 @@ const OUTCOMES: Outcome[] = [
     title: "Prenotazioni mentre dormi",
     description:
       "I clienti scelgono servizio, giorno e orario online — giorno e notte. Ricevi la prenotazione, loro ricevono conferma via email. Addio telefonate a vuoto.",
-    proof: "Medo Spa: prenotazioni raddoppiate, chiamate ridotte del 65%",
+    proof: "Calendario autonomo 24/7 con notifiche istantanee",
   },
   {
     icon: <Phone className="w-5 h-5" />,
@@ -48,16 +48,16 @@ const OUTCOMES: Outcome[] = [
   },
   {
     icon: <MapPin className="w-5 h-5" />,
-    title: "Trovati su Google Maps",
+    title: "Trovati su Google Maps a Messina",
     description:
-      "Configuriamo scheda Google Business, posizione su Maps e snippet di ricerca per far trovare te a chi cerca nelle vicinanze, non la concorrenza.",
-    proof: "La Locanda: oltre 4.200 visualizzazioni menu al mese da Google",
+      "Configuro scheda Google Business, posizione su Maps e snippet di ricerca per far trovare la tua attività a chi cerca a Messina e provincia.",
+    proof: "Ottimizzazione SEO locale e scheda Google Maps",
   },
   {
     icon: <Gauge className="w-5 h-5" />,
     title: "Velocità per non perdere visite",
     description:
-      "La metà degli utenti abbandona un sito se impiega più di 3 secondi. I nostri caricano in meno di uno — persino in 3G o con Wi-Fi lento.",
+      "La metà degli utenti abbandona un sito se impiega più di 3 secondi. Il tuo caricherà in meno di uno — persino in 3G o con Wi-Fi lento.",
     proof: "Caricamento istantaneo, punteggio Lighthouse 95+",
   },
   {
@@ -79,14 +79,14 @@ const OUTCOMES: Outcome[] = [
     title: "Vendi senza un negozio fisico",
     description:
       "E-commerce completo: carrello, magazzino, coupon e pagamento istantaneo. Aggiungi nuovi prodotti dal telefono in due minuti.",
-    proof: "Video tutorial guidato incluso con ogni negozio",
+    proof: "Guida pratica per gestione autonoma prodotti",
   },
   {
     icon: <Box className="w-5 h-5" />,
     title: "Effetto 3D unico e inimitabile",
     description:
       "I clienti ruotano, personalizzano ed esplorano i tuoi prodotti sullo schermo. Memorabile, coinvolgente e difficile da replicare per gli altri.",
-    proof: "The Yoz Shop: configuratore 3D a 60 FPS su iPhone",
+    proof: "Rendering 3D WebGL a 60 FPS su smartphone",
   },
 ];
 
@@ -114,8 +114,8 @@ export const BentoSection: React.FC = () => {
             <span className="text-[#96998E]">È il tuo collaboratore più instancabile.</span>
           </h2>
           <p className="text-base sm:text-lg text-[#62695F] leading-relaxed max-w-2xl">
-            Ogni sito che consegniamo ha un obiettivo preciso: raccoglie prenotazioni, vende prodotti, risponde a domande e
-            porta clienti nel tuo locale o studio. Ecco cosa farà il tuo.
+            Ogni sito che consegno ha un obiettivo concreto: raccoglie prenotazioni, vende prodotti, risponde a domande e
+            porta clienti nella tua attività a Messina. Ecco cosa farà il tuo.
           </p>
         </motion.div>
 

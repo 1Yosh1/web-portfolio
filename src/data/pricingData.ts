@@ -92,20 +92,42 @@ export const PRICING_TIERS: PricingTier[] = [
 export const MILESTONES = [
   {
     step: "01",
-    phase: "Avvio & Approvazione Design",
+    phase: "Avvio & Riserva Slot",
     percent: 30,
-    description: "Caparra del 30% (90 € / 150 € / 210 €) per riservare lo sprint. Progettiamo l'aspetto visivo del sito e lo revisioniamo insieme.",
+    description: "Acconto del 30% (90 € / 150 € / 210 €) per riservare lo slot e iniziare il lavoro. Concordiamo struttura e layout iniziale.",
   },
   {
     step: "02",
-    phase: "Sviluppo & Anteprima Privata",
-    percent: 40,
-    description: "Sviluppiamo il sito su un link di prova privato dove potrai testare pulsanti, moduli e visualizzazione su smartphone.",
+    phase: "Sviluppo & Anteprima Live",
+    percent: 0,
+    description: "Nessun pagamento intermedio. Lavori su un link di prova privato dove testi ogni funzione e richiedi le modifiche necessarie.",
   },
   {
     step: "03",
-    phase: "Messa Online & Consegna Completa",
-    percent: 30,
-    description: "Colleghiamo il tuo dominio, pubblichiamo il sito online e ti trasferiamo la piena proprietà al 100%.",
+    phase: "Saldo & Messa Online",
+    percent: 70,
+    description: "Saldo finale del 70% solo dopo la tua approvazione completa. Colleghiamo il tuo dominio e ti consegno codici e accessi.",
   },
 ];
+
+export const CARE_PLAN = {
+  id: "care-plan",
+  name: "Piano Manutenzione & Supporto",
+  price: 39,
+  currencySymbol: "€",
+  billingPeriod: "/mese",
+  tagline: "Mantieni il tuo sito sempre aggiornato, protetto e performante senza doverti preoccupare della parte tecnica.",
+  features: [
+    "Backup periodici completi di codice e contenuti",
+    "Aggiornamenti testi, prezzi, promozioni e immagini su richiesta",
+    "Monitoraggio continuo sicurezza, SSL e velocità di caricamento",
+    "Supporto prioritario diretto via WhatsApp o telefono",
+    "Nessun vincolo di durata: puoi disdire in qualsiasi momento con un messaggio",
+  ],
+};
+
+export const DOMAIN_HOSTING_DISCLOSURE = {
+  title: "Costi di dominio e hosting (zero costi nascosti)",
+  description:
+    "Per garantirti il 100% di proprietà e indipendenza, dominio e hosting sono a carico tuo (circa 15 € – 25 € all'anno). Ti guido passo passo nella registrazione: sarai l'unico proprietario senza dover dipendere da nessuno.",
+};

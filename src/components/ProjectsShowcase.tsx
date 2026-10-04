@@ -13,23 +13,23 @@ interface ProjectsShowcaseProps {
 /** Plain-language "what this site does for its owner" line, keyed by project id. */
 const CLIENT_OUTCOMES: Record<string, { result: string; proof: string }> = {
   "yoz-shop": {
-    result: "Vende tavole da skate con un configuratore 3D su cui i clienti interagiscono per minuti",
+    result: "Vende prodotti con un configuratore 3D interattivo su cui i clienti interagiscono",
     proof: "60 FPS su smartphone · catalogo istantaneo",
   },
   "medo-spa": {
-    result: "Prenota trattamenti benessere 24/7 — telefonate giù del 65%, prenotazioni raddoppiate",
+    result: "Gestisce prenotazioni trattamenti 24/7 con calendario sincronizzato",
     proof: "Carica in 0.62s · zero doppie prenotazioni",
   },
   "essenza-moda-capelli": {
-    result: "Trasforma il lookbook del salone nel canale di conversione più redditizio",
+    result: "Vetrina lookbook per salone parrucchiere a Messina con richiesta appuntamenti",
     proof: "Lighthouse 98/100 · impeccabile su mobile",
   },
   locanda: {
-    result: "Mette il menu nelle mani di ogni turista all'istante — persino in una cantina in pietra",
-    proof: "Oltre 4.200 scansioni/mese · carica in 110ms",
+    result: "Menu digitale QR ultra-veloce per ristorante o pizzeria a Messina",
+    proof: "Dati Schema.org · carica in 110ms",
   },
   "discover-messina": {
-    result: "Guida i viaggiatori tra monumenti, percorsi gastronomici e guide turistiche locali",
+    result: "Guida culturale e mappa interattiva per valorizzare le attività di Messina",
     proof: "84 kB totali · filtri mappa istantanei",
   },
 };
@@ -83,15 +83,15 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({
           <div className="max-w-3xl space-y-4">
             <span className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#315B46]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#315B46]" />
-              Siti web di clienti reali, attivi ora
+              Progetti dimostrativi & architetture live
             </span>
             <h2 className="text-3xl sm:text-5xl font-semibold tracking-[-0.02em] leading-[1.1] text-[#20271F]">
-              Ogni progetto qui ha un compito preciso.
+              Esempi concreti di ciò che posso
               <br />
-              <span className="text-[#96998E]">E lo sta svolgendo oggi stesso.</span>
+              <span className="text-[#96998E]">costruire per la tua attività.</span>
             </h2>
             <p className="text-base sm:text-lg text-[#62695F] leading-relaxed max-w-2xl">
-              Nessun mockup, nessun concept teorico. Sono siti web reali che lavorano per attività vere
+              Progetti dimostrativi funzionanti ed esempi di architettura per attività locali
               — passa sopra con il cursore per vederli in azione.
             </p>
           </div>

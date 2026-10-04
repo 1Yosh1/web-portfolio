@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { X, Send, CheckCircle2, Clock, AlertCircle } from "lucide-react";
+import { X, Send, CheckCircle2, Clock, AlertCircle, MessageCircle, Phone } from "lucide-react";
 import confetti from "canvas-confetti";
 
 interface ContactDrawerProps {
@@ -153,8 +153,8 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
                 Messaggio inviato
               </h3>
               <p className="text-sm text-[#62695F] max-w-xs mx-auto leading-relaxed">
-                Grazie, <span className="text-[#20271F] font-semibold">{name}</span>. Esamineremo
-                la tua richiesta e risponderemo entro 12 ore con i prossimi passi.
+                Grazie, <span className="text-[#20271F] font-semibold">{name}</span>. Esaminerò
+                la tua richiesta e risponderò entro 12 ore con i prossimi passi.
               </p>
               <button
                 type="button"
@@ -169,9 +169,30 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4 pt-6">
+              {/* WhatsApp direct bar */}
+              <div className="p-3.5 rounded-xl bg-[#E8F5EF] border border-[#CDE5D8] flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#25D366] flex items-center justify-center text-white shrink-0">
+                    <MessageCircle className="w-4 h-4 fill-white" />
+                  </div>
+                  <div className="text-xs">
+                    <span className="font-semibold text-[#1C3E2F] block">Preferisci WhatsApp?</span>
+                    <span className="text-[#315B46]">+39 351 000 0000 · Messina</span>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/393510000000?text=Ciao,%20vorrei%20informazioni%20per%20un%20sito%20web%20a%20Messina"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-press px-3 py-1.5 rounded-md bg-[#25D366] text-white text-xs font-semibold hover:bg-[#20ba59] transition-colors shrink-0 whitespace-nowrap"
+                >
+                  Apri chat
+                </a>
+              </div>
+
               <p className="text-[13px] text-[#62695F] leading-relaxed">
                 Nessun gergo tecnico — descrivi solo ciò che desideri che il sito faccia per la tua
-                attività. Lo tradurremo noi in un piano operativo.
+                attività a Messina. Lo trasformerò io in un piano operativo chiaro.
               </p>
 
               {error && (

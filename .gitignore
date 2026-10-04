@@ -33,3 +33,5 @@ brag-company-it/
 .serena/
 .freebuff/
 graphify-out/
+.vercel
+.env*

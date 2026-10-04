@@ -39,7 +39,7 @@ export interface Project {
   accentColor: string;
   glowColor: string;
   featured: boolean;
-  status: "Production Architecture" | "Active Production";
+  status: "Progetto Dimostrativo" | "Production Architecture" | "Active Production";
   previewUrl: string;
   videoUrl: string;
   videoUrlIt?: string;
@@ -59,21 +59,21 @@ export const PROJECTS: Project[] = [
   {
     id: "yoz-shop",
     title: "The Yoz Shop",
-    subtitle: "25 anni di cultura skate & configuratore 3D interattivo",
-    clientType: "Brand E-Commerce Commerciale",
+    subtitle: "Configuratore 3D interattivo & store headless",
+    clientType: "Shop & Skate Store (Progetto Dimostrativo)",
     category: "3D & E-Commerce",
     description:
-      "Un configuratore 3D di tavole da skate e architettura store headless con fisica dinamica, personalizzazione grip in tempo reale e navigazione istantanea nel catalogo.",
+      "Un configuratore 3D di tavole da skate con fisica dinamica, personalizzazione grip in tempo reale e navigazione fluida nel catalogo.",
     fullCaseStudy: {
       overview:
-        "The Yoz Shop necessitava di una ricostruzione digitale per celebrare la cultura skate offrendo personalizzazione 3D WebGL su desktop e mobile.",
+        "Progetto dimostrativo e architettura di riferimento per brand retail ed e-commerce che desiderano personalizzazione 3D WebGL su desktop e mobile.",
       challenge:
-        "I template e-commerce convenzionali non riuscivano a renderizzare la curvatura concava delle tavole e texture realistiche del legno a 60 FPS su dispositivi mobili.",
+        "Renderizzare geometrie 3D concave e texture fotorealistiche a 60 FPS stabili su smartphone a basso consumo.",
       solution:
-        "Abbiamo sviluppato una pipeline WebGL dedicata con Three.js e React Three Fiber con motore fisico Rapier, abbinata a frontend Next.js headless e sincronizzazione immediata del carrello.",
+        "Ho sviluppato una pipeline WebGL dedicata con Three.js e React Three Fiber con motore fisico Rapier, abbinata a frontend Next.js ultra-reattivo.",
       deliverables: [
         "Configuratore skateboard interattivo 3D WebGL",
-        "Simulatore fisico di ruote e grip-tape",
+        "Simulatore fisico di rotazione e grip-tape",
         "Catalogo prodotti headless ad alta velocità",
         "Interfaccia ottimizzata per touch e dispositivi mobili",
       ],
@@ -92,7 +92,7 @@ export const PROJECTS: Project[] = [
     accentColor: "#f97316",
     glowColor: "rgba(249, 115, 22, 0.25)",
     featured: true,
-    status: "Production Architecture",
+    status: "Progetto Dimostrativo",
     previewUrl: "https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?auto=format&fit=crop&w=1200&q=80",
     videoUrl: "/projects/yoz-shop.mp4",
     videoUrlIt: "/projects/yoz-shop-it.mp4",
@@ -139,22 +139,22 @@ useFrame((_, delta) => {
   {
     id: "medo-spa",
     title: "Medo Spa",
-    subtitle: "Portale & CRM per santuario del benessere di lusso",
-    clientType: "Impresa Benessere di Alto Livello",
+    subtitle: "Portale prenotazioni & calendario per centro benessere",
+    clientType: "Centro Benessere & Trattamenti (Progetto Dimostrativo)",
     category: "Luxury & Hospitality",
     description:
-      "Un portale rilassante che unisce chiara gerarchia tipografica, scorrimento a fisica d'inerzia, prenotazione operatori in tempo reale e CRM clienti Supabase.",
+      "Un portale fluido che unisce chiara gerarchia visiva, scorrimento a fisica d'inerzia, prenotazione operatori in tempo reale e gestione appuntamenti.",
     fullCaseStudy: {
       overview:
-        "Medo Spa desiderava un'esperienza di prenotazione serena all'altezza dei suoi ritiri olistici di lusso, sostituendo le chiamate telefoniche con un sistema automatico.",
+        "Progetto dimostrativo che illustra come un centro estetico o spa locale possa automatizzare le prenotazioni 24/7 senza perdite di tempo telefonico.",
       challenge:
-        "Preservare l'atmosfera distesa di una spa d'élite gestendo al contempo calendari multi-operatore complessi e abbonamenti ricorrenti.",
+        "Garantire prenotazioni rapide da mobile senza conflitti di orario e con sincronizzazione calendario istantanea.",
       solution:
-        "Abbiamo sviluppato un'interfaccia a scorrimento inerziale con Lenis e GSAP, integrata con backend Supabase con blocco concorrente anti doppia-prenotazione e promemoria automatici.",
+        "Ho sviluppato un'interfaccia a scorrimento inerziale con Lenis e Next.js, integrata con database Supabase con blocco concorrente anti-doppia prenotazione.",
       deliverables: [
         "Interfaccia editoriale con scorrimento a inerzia",
-        "Motore di prenotazione live multi-terapista",
-        "Dashboard amministrativa CRM e storico clienti",
+        "Motore di prenotazione live multi-operatore",
+        "Dashboard per consultazione appuntamenti e clienti",
         "Suite completa di test E2E con Playwright",
       ],
       metrics: [
@@ -172,7 +172,7 @@ useFrame((_, delta) => {
     accentColor: "#10b981",
     glowColor: "rgba(16, 185, 129, 0.25)",
     featured: true,
-    status: "Production Architecture",
+    status: "Progetto Dimostrativo",
     previewUrl: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
     videoUrl: "/projects/medo-spa.mp4",
     videoUrlIt: "/projects/medo-spa-it.mp4",
@@ -218,22 +218,22 @@ if (error?.code === "P0001") throw new Error("Slot already claimed in race condi
   {
     id: "essenza-moda-capelli",
     title: "Essenza Moda Capelli",
-    subtitle: "Flagship per salone di alta coiffure di lusso",
-    clientType: "Atelier Hair Stylist d'Élite",
+    subtitle: "Vetrina digitale & prenotazioni per salone parrucchiere a Messina",
+    clientType: "Salone Parrucchiere & Beauty a Messina (Progetto Dimostrativo)",
     category: "Luxury & Hospitality",
     description:
-      "Un flagship digitale editoriale per salone di lusso italiano con caroselli lookbook, prenotazione consulenze stilistiche VIP e gerarchia tipografica rigorosa.",
+      "Vetrina digitale editoriale per salone di acconciatura con lookbook fotografico, presentazione servizi e prenotazione appuntamenti su misura.",
     fullCaseStudy: {
       overview:
-        "Essenza necessitava di una vetrina digitale che riflettesse gli standard editoriali dell'alta moda milanese e parigina per una clientela esclusiva in Sicilia.",
+        "Progetto dimostrativo sviluppato per parrucchieri, barbieri e centri beauty a Messina che desiderano presentare tagli e trattamenti con stile raffinato.",
       challenge:
-        "Mostrare fotografie editoriali ad altissima risoluzione senza compromettere la velocità di caricamento istantanea su reti mobili.",
+        "Mostrare fotografie ad alta risoluzione senza rallentare il caricamento su smartphone con copertura di rete debole.",
       solution:
-        "Sviluppate pipeline di immagini responsive WebP/AVIF, microinterazioni fluide e verifica E2E dei flussi di prenotazione.",
+        "Ho sviluppato una pipeline di immagini responsive in formati moderni WebP/AVIF, abbinata a un'esperienza di navigazione leggera e fluida.",
       deliverables: [
-        "Lookbook di alta moda & video showcase",
-        "Selezione servizi VIP e assegnazione stilista",
-        "Funnel di prenotazione di lusso mobile-first",
+        "Lookbook visivo & video showcase",
+        "Selezione servizi e richiesta appuntamento",
+        "Interfaccia mobile-first ultra reattiva",
         "Tipografia conforme agli standard di accessibilità WCAG 2.1 AA",
       ],
       metrics: [
@@ -251,7 +251,7 @@ if (error?.code === "P0001") throw new Error("Slot already claimed in race condi
     accentColor: "#ec4899",
     glowColor: "rgba(236, 72, 153, 0.25)",
     featured: true,
-    status: "Production Architecture",
+    status: "Progetto Dimostrativo",
     previewUrl: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80",
     videoUrl: "/projects/essenza-moda-capelli.mp4",
     videoUrlIt: "/projects/essenza-moda-capelli-it.mp4",
@@ -260,7 +260,7 @@ if (error?.code === "P0001") throw new Error("Slot already claimed in race condi
     mockupTheme: "luxury",
     devicePreview: {
       desktopMock: "/mockups/essenza-desktop.png",
-      tagline: "Estetica ispirata alle passerelle con prenotazione senza attriti",
+      tagline: "Estetica curata con richiesta appuntamenti senza attriti",
     },
     architectureHighlights: [
       {
@@ -296,23 +296,23 @@ if (error?.code === "P0001") throw new Error("Slot already claimed in race condi
   {
     id: "locanda",
     title: "La Locanda Dei Mori",
-    subtitle: "Branding digitale fine dining & menu QR dinamico",
-    clientType: "Ristorante tipico siciliano (Taormina)",
+    subtitle: "Sito web ristorazione locale & menu QR dinamico a Messina",
+    clientType: "Ristorante & Pizzeria a Messina (Progetto Dimostrativo)",
     category: "Luxury & Hospitality",
     description:
-      "Sito web gastronomico e piattaforma menu QR interattiva creata con tonalità calde mediterranee, cambio lingua IT/EN e metadati ricchi Schema.org.",
+      "Sito web gastronomico e piattaforma menu QR interattiva creata con tonalità calde, cambio lingua IT/EN e dati strutturati Schema.org per la ricerca locale.",
     fullCaseStudy: {
       overview:
-        "Situata nella splendida Taormina, La Locanda Dei Mori desiderava aumentare la rotazione dei tavoli e offrire un menu digitale che celebrasse le etichette siciliane.",
+        "Progetto dimostrativo per ristoranti, trattorie e pizzerie di Messina che vogliono un menu QR fulmineo e una presenza curata su Google Maps.",
       challenge:
-        "Creare un menu QR che si carichi istantaneamente anche nelle cantine storiche in pietra dove la ricezione mobile è debole.",
+        "Creare un menu digitale che si carichi istantaneamente anche in locali chiusi o seminterrati dove la ricezione cellulare è debole.",
       solution:
-        "Implementato livello di cache offline-first, fogli di stile leggeri e dati strutturati semantici Schema.org che hanno aumentato la visibilità su Google Maps.",
+        "Ho implementato una strategia di caching offline-first, bundle leggero e markup Schema.org specifico per attività di ristorazione locale.",
       deliverables: [
-        "Identità di marca digitale mediterranea",
-        "Menu QR dinamico attivo offline in meno di 100ms",
-        "Cambio lingua bilingue (Italiano / Inglese)",
-        "Rich Snippet Google e link prenotazione tavoli",
+        "Identità visiva calda e accogliente",
+        "Menu QR dinamico attivo anche offline in 110ms",
+        "Supporto bilingue (Italiano / Inglese)",
+        "Dati strutturati Google Rich Snippets e pulsante contatto rapido",
       ],
       metrics: [
         { label: "Cold Cache Load", value: "110ms" },
@@ -329,7 +329,7 @@ if (error?.code === "P0001") throw new Error("Slot already claimed in race condi
     accentColor: "#eab308",
     glowColor: "rgba(234, 179, 8, 0.25)",
     featured: false,
-    status: "Production Architecture",
+    status: "Progetto Dimostrativo",
     previewUrl: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
     videoUrl: "/projects/locanda.mp4",
     videoUrlIt: "/projects/locanda-it.mp4",
@@ -338,7 +338,7 @@ if (error?.code === "P0001") throw new Error("Slot already claimed in race condi
     mockupTheme: "minimal",
     devicePreview: {
       desktopMock: "/mockups/locanda-desktop.png",
-      tagline: "Autentica estetica mediterranea con risposta QR fulminea",
+      tagline: "Estetica accogliente con risposta menu QR fulminea",
     },
     architectureHighlights: [
       {
@@ -367,7 +367,7 @@ export const restaurantJsonLd = {
   "hasMenu": "https://locanda-dei-mori.vercel.app/menu",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Taormina",
+    "addressLocality": "Messina",
     "addressRegion": "ME",
     "addressCountry": "IT"
   }
@@ -383,23 +383,23 @@ export const restaurantJsonLd = {
   {
     id: "discover-messina",
     title: "Discover Messina",
-    subtitle: "Motore turistico culturale & guida interattiva della città",
-    clientType: "Autorità turistica regionale & operatori locali",
+    subtitle: "Guida interattiva culturale & percorsi dello Stretto",
+    clientType: "Guida Locale & Portale Turistico (Concept per Messina)",
     category: "Web Apps & Portals",
     description:
-      "Guida culturale interattiva ai monumenti storici, percorsi gastronomici siciliani ed escursioni nello Stretto di Messina con filtri geospaziali in tempo reale.",
+      "Guida culturale interattiva ai luoghi storici, percorsi gastronomici siciliani ed escursioni a Messina con filtri geospaziali immediati.",
     fullCaseStudy: {
       overview:
-        "I viaggiatori in visita in Sicilia avevano bisogno di un portale moderno per scoprire itinerari a piedi, monumenti nascosti e botteghe artigiane locali.",
+        "Concept dimostrativo per valorizzare il territorio di Messina, i suoi monumenti storici e le attività commerciali locali con una mappa mobile intuitiva.",
       challenge:
-        "Organizzare centinaia di punti di interesse storici senza affaticare gli utenti su smartphone.",
+        "Organizzare punti di interesse ed itinerari a piedi senza appesantire la navigazione su smartphone.",
       solution:
-        "Progettata mappa interattiva con filtri veloci, generatori di itinerari per categoria e prenotazione diretta con guide certificate.",
+        "Ho sviluppato una mappa interattiva con filtri istantanei, percorsi a tema e predisposizione contatti per guide e commercianti locali.",
       deliverables: [
-        "Mappa interattiva monumenti e percorsi gastronomici",
-        "Motore di filtraggio per categoria di luoghi storici",
-        "Integrazione prenotazioni con tour operator locali",
-        "Layout ottimizzato per qualsiasi dispositivo mobile",
+        "Mappa interattiva luoghi storici e gastronomia",
+        "Motore di filtraggio veloce per categoria",
+        "Predisposizione contatti e prenotazioni dirette",
+        "Layout mobile-first leggero e accessibile",
       ],
       metrics: [
         { label: "Initial Bundle", value: "84 kB" },
@@ -416,7 +416,7 @@ export const restaurantJsonLd = {
     accentColor: "#06b6d4",
     glowColor: "rgba(6, 182, 212, 0.25)",
     featured: false,
-    status: "Production Architecture",
+    status: "Progetto Dimostrativo",
     previewUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
     videoUrl: "/projects/discover-messina.mp4",
     videoUrlIt: "/projects/discover-messina-it.mp4",
@@ -425,7 +425,7 @@ export const restaurantJsonLd = {
     mockupTheme: "vibrant",
     devicePreview: {
       desktopMock: "/mockups/messina-desktop.png",
-      tagline: "Esplora tesori storici con generatore di itinerari geospaziale",
+      tagline: "Esplora Messina con mappa e percorsi geospaziali",
     },
     architectureHighlights: [
       {

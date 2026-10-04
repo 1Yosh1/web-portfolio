@@ -9,20 +9,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Studio Strada — Siti Web Che Lavorano Per La Tua Attività",
+  title: "Siti Web per Attività di Messina | Studio Strada",
   description:
-    "Realizziamo siti web veloci e su misura con prenotazioni online, e-commerce e presentazioni 3D. Pronti in 5–21 giorni, prezzi fissi da 300 €, 100% di tua proprietà.",
+    "Realizzo siti web veloci e su misura per attività e professionisti a Messina. Prenotazioni online, e-commerce, menu digitali. Prezzo fisso da 300 €, 100% di tua proprietà.",
   keywords: [
+    "Siti web Messina",
+    "Sviluppo siti web Messina",
+    "Web design Messina",
     "Studio Strada",
-    "sviluppo web",
-    "sito web prenotazioni",
-    "siti per piccole imprese",
-    "e-commerce",
-    "vetrina prodotti 3D",
-    "sito ristorante",
-    "sito parrucchiere",
+    "sito web prenotazioni Messina",
+    "siti per ristoranti Messina",
+    "siti per parrucchieri Messina",
+    "e-commerce Messina",
   ],
-  authors: [{ name: "Studio Strada" }],
+  authors: [{ name: "Studio Strada — Messina" }],
 };
 
 export default function RootLayout({

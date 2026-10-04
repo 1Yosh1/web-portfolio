@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X, MessageCircle } from "lucide-react";
 
 interface NavbarProps {
   onOpenContact: (projectOrTier?: string) => void;
@@ -34,7 +34,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
     { label: "Progetti", href: "#projects" },
     { label: "Cosa ottieni", href: "#outcomes" },
     { label: "Prezzi", href: "#pricing" },
-    { label: "Recensioni", href: "#reviews" },
+    { label: "FAQ", href: "#faq" },
   ];
 
   return (
@@ -69,10 +69,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
 
         {/* CTA */}
         <div className="hidden sm:flex items-center gap-2">
+          <a
+            href="https://wa.me/393510000000?text=Ciao,%20vorrei%20informazioni%20per%20un%20sito%20web%20a%20Messina"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-press inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#25D366] text-white text-[12px] font-semibold hover:bg-[#20ba59] transition-colors shadow-sm"
+          >
+            <MessageCircle className="w-3.5 h-3.5 fill-white" />
+            <span>WhatsApp</span>
+          </a>
           <button
             type="button"
             onClick={() => onOpenContact("Richiesta Progetto")}
-            className="btn-press group inline-flex items-center gap-1.5 pl-4 pr-1.5 py-1.5 rounded-lg bg-[#315B46] text-white text-[13px] font-semibold hover:bg-[#315B46] transition-colors cursor-pointer"
+            className="btn-press group inline-flex items-center gap-1.5 pl-4 pr-1.5 py-1.5 rounded-lg bg-[#315B46] text-white text-[13px] font-semibold hover:bg-[#244634] transition-colors cursor-pointer"
           >
             <span>Ottieni il tuo sito</span>
             <span className="w-5 h-5 rounded-md bg-white/15 flex items-center justify-center group-hover:rotate-45 transition-transform duration-200">
@@ -107,6 +116,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
                 {link.label}
               </a>
             ))}
+            <a
+              href="https://wa.me/393510000000?text=Ciao,%20vorrei%20informazioni%20per%20un%20sito%20web%20a%20Messina"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-press mt-2 w-full py-2.5 rounded-lg bg-[#25D366] text-white text-sm font-semibold flex items-center justify-center gap-2"
+            >
+              <MessageCircle className="w-4 h-4 fill-white" />
+              <span>Contattami su WhatsApp</span>
+            </a>
             <button
               type="button"
               onClick={() => {

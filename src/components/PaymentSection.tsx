@@ -10,7 +10,7 @@ import {
   Rocket,
   ShieldCheck,
 } from "lucide-react";
-import { PRICING_TIERS, MILESTONES } from "../data/pricingData";
+import { PRICING_TIERS, MILESTONES, CARE_PLAN, DOMAIN_HOSTING_DISCLOSURE } from "../data/pricingData";
 import { CheckoutPayload } from "./CheckoutModal";
 
 interface PaymentSectionProps {
@@ -42,13 +42,13 @@ export const PaymentSection: React.FC<PaymentSectionProps> = ({
             Prezzi fissi, scegli il tuo pacchetto
           </span>
           <h2 className="text-3xl sm:text-5xl font-semibold tracking-[-0.02em] leading-[1.1] text-[#20271F]">
-            Un solo prezzo. Tutto incluso.
+            Un solo prezzo fisso.
             <br />
-            <span className="text-[#96998E]">Nessuna sorpresa dopo.</span>
+            <span className="text-[#96998E]">Zero sorprese o costi nascosti.</span>
           </h2>
           <p className="text-base sm:text-lg text-[#62695F] leading-relaxed max-w-2xl">
-            Il prezzo che vedi è quello finale — design, sviluppo, lancio e supporto inclusi.
-            Il 30% riserva il tuo sprint, il resto lo saldi solo quando sei soddisfatto al 100%.
+            Il prezzo pattuito è quello definitivo. Versi il 30% per avviare il progetto;
+            il saldo del 70% lo versi solo quando il sito è completato e approvato da te.
           </p>
         </motion.div>
 
@@ -189,10 +189,10 @@ export const PaymentSection: React.FC<PaymentSectionProps> = ({
         >
           <div className="flex items-center justify-between mb-5">
             <h3 className="text-lg font-semibold tracking-tight text-[#20271F]">
-              Come funziona il pagamento
+              Come funziona il pagamento (30% / 70%)
             </h3>
             <span className="text-xs font-medium text-[#96998E]">
-              Approvi ogni fase prima di saldare la tranche successiva
+              30% per iniziare lo slot · 70% saldo solo ad approvazione finale
             </span>
           </div>
 
@@ -217,6 +217,69 @@ export const PaymentSection: React.FC<PaymentSectionProps> = ({
           </div>
         </motion.div>
 
+        {/* Domain & Hosting Transparency Note */}
+        <motion.div
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.45 }}
+          className="mt-6 rounded-xl border border-[#DED9CE] bg-[#FBF9F4] p-6 sm:p-7"
+        >
+          <div className="flex items-start gap-4">
+            <div className="w-9 h-9 rounded-lg bg-[#E3E9DF] flex items-center justify-center shrink-0 mt-0.5">
+              <ShieldCheck className="w-5 h-5 text-[#315B46]" />
+            </div>
+            <div className="space-y-1">
+              <h4 className="text-sm font-semibold text-[#20271F]">
+                {DOMAIN_HOSTING_DISCLOSURE.title}
+              </h4>
+              <p className="text-xs text-[#62695F] leading-relaxed">
+                {DOMAIN_HOSTING_DISCLOSURE.description}
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Monthly Care Plan Card */}
+        <motion.div
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.45 }}
+          className="mt-6 rounded-2xl border border-[#DED9CE] bg-[#F4F0E8] p-6 sm:p-8"
+        >
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div className="space-y-2 max-w-xl">
+              <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-[#315B46] bg-[#E3E9DF] px-2.5 py-0.5 rounded-md">
+                Opzionale · Senza vincoli
+              </div>
+              <h3 className="text-xl font-semibold text-[#20271F]">
+                {CARE_PLAN.name} — €{CARE_PLAN.price}{CARE_PLAN.billingPeriod}
+              </h3>
+              <p className="text-xs text-[#62695F] leading-relaxed">
+                {CARE_PLAN.tagline}
+              </p>
+              <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {CARE_PLAN.features.map((f, i) => (
+                  <div key={i} className="flex items-center gap-2 text-xs text-[#20271F]">
+                    <Check className="w-3.5 h-3.5 text-[#315B46] shrink-0" />
+                    <span>{f}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => onOpenContact("Richiesta Piano Manutenzione")}
+              className="btn-press shrink-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#20271F] text-white text-xs font-semibold hover:bg-[#315B46] transition-colors cursor-pointer self-start lg:self-center whitespace-nowrap"
+            >
+              <span>Aggiungi piano manutenzione</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        </motion.div>
+
         {/* Custom project banner */}
         <motion.div
           initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
@@ -227,11 +290,11 @@ export const PaymentSection: React.FC<PaymentSectionProps> = ({
         >
           <div>
             <h3 className="text-lg font-semibold tracking-tight text-[#20271F]">
-              Hai in mente qualcosa di diverso o più grande?
+              Hai in mente qualcosa di diverso o personalizzato?
             </h3>
             <p className="text-sm text-[#62695F] mt-1 max-w-2xl leading-relaxed">
-              Siti multilingua, portali su misura, configuratori 3D o piattaforme complesse —
-              spiegaci la tua idea e la quantificheremo con chiarezza e trasparenza.
+              Siti con esigenze speciali, integrazioni gestionali o cataloghi particolari —
+              scrivimi la tua idea e preparerò un preventivo trasparente entro 24 ore.
             </p>
           </div>
           <button
@@ -239,7 +302,7 @@ export const PaymentSection: React.FC<PaymentSectionProps> = ({
             onClick={() => onOpenContact("Richiesta Progetto Personalizzato")}
             className="btn-press shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#20271F] text-white text-sm font-semibold hover:bg-[#315B46] transition-colors cursor-pointer whitespace-nowrap"
           >
-            <span>Parlaci del tuo progetto</span>
+            <span>Scrivimi del tuo progetto</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </motion.div>

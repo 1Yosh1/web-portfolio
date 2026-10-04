@@ -7,7 +7,7 @@ import { BentoSection } from "../components/BentoSection";
 import { ProjectsShowcase } from "../components/ProjectsShowcase";
 import { StickyStackSection } from "../components/StickyStackSection";
 import { PaymentSection } from "../components/PaymentSection";
-import { TestimonialsSection } from "../components/TestimonialsSection";
+import { FaqSection } from "../components/FaqSection";
 import { Footer } from "../components/Footer";
 import { ProjectModal } from "../components/ProjectModal";
 import { CheckoutModal, CheckoutPayload } from "../components/CheckoutModal";
@@ -54,8 +54,8 @@ export default function Home() {
         onOpenContact={handleOpenContact}
       />
 
-      {/* 6. Reviews */}
-      <TestimonialsSection />
+      {/* 6. FAQ */}
+      <FaqSection />
 
       {/* 7. Footer */}
       <Footer onOpenContact={handleOpenContact} />

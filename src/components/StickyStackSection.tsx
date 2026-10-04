@@ -15,14 +15,14 @@ export const StickyStackSection: React.FC<StickyStackProps> = ({ onOpenContact }
     {
       step: "01",
       icon: <MessageSquare className="w-4 h-4 text-[#315B46]" />,
-      title: "Raccontaci cosa serve alla tua attività",
+      title: "Raccontami cosa serve alla tua attività",
       duration: "Giorno 1 — Chiamata di 20 minuti",
       description:
-        "Una breve conversazione sui tuoi clienti e sugli obiettivi del sito. Gestiamo noi tutte le questioni tecniche — non dovrai mai imparare il nostro gergo.",
+        "Una breve conversazione sui tuoi clienti e sugli obiettivi del sito. Gestisco io ogni aspetto tecnico — non dovrai mai imparare gergo da programmatori.",
       points: [
-        "Scriviamo il piano in linguaggio chiaro e semplice",
-        "Prezzo fisso concordato prima dell'inizio dei lavori",
-        "Nessun pagamento fino all'approvazione del design",
+        "Definisco il piano di lavoro in modo chiaro e trasparente",
+        "Prezzo fisso concordato prima di iniziare",
+        "30% acconto per iniziare, 70% saldo solo a consegna approvata",
       ],
       action: "Inizia con una chiamata gratuita",
       visual: (
@@ -34,31 +34,31 @@ export const StickyStackSection: React.FC<StickyStackProps> = ({ onOpenContact }
             </div>
             {[
               { w: "w-4/5", label: "“Ho bisogno di prenotazioni senza telefonate”" },
-              { w: "w-3/5", label: "“I clienti devono trovarmi su Google”" },
-              { w: "w-2/3", label: "“Voglio caparre anticipate”" },
+              { w: "w-3/5", label: "“I clienti a Messina devono trovarmi su Google”" },
+              { w: "w-2/3", label: "“Voglio mostrare listino e contatti WhatsApp”" },
             ].map((item) => (
               <div key={item.label} className={`${item.w} rounded-lg bg-[#FBF9F4] border border-[#DED9CE] px-3.5 py-2.5 text-xs text-[#20271F] font-medium`}>
                 {item.label}
               </div>
             ))}
           </div>
-          <div className="text-[11px] text-[#96998E] pt-3">Tu parli. Noi traduciamo in un piano operativo.</div>
+          <div className="text-[11px] text-[#96998E] pt-3">Tu mi parli della tua attività. Io creo il piano operativo.</div>
         </div>
       ),
     },
     {
       step: "02",
       icon: <PenTool className="w-4 h-4 text-[#315B46]" />,
-      title: "Approva il design, poi passiamo al codice",
+      title: "Approva la bozza, poi passo al codice",
       duration: "Giorni 2–10 — vedi il sito prendere vita",
       description:
-        "Avrai un link di anteprima live già dal secondo giorno e potrai commentare direttamente sulla pagina — senza allegati PDF o scambi infiniti di email. Approvi il design prima che scriviamo una riga di codice.",
+        "Avrai un link di anteprima privato già dai primi giorni per testare e commentare direttamente sulla pagina. Approvi la struttura prima del rilascio finale.",
       points: [
-        "Link di anteprima aggiornato ogni giorno",
-        "Revisioni illimitate durante lo sprint",
+        "Link di anteprima privato aggiornato regolarmente",
+        "Revisioni e modifiche durante lo sviluppo",
         "Test completo su smartphone reali prima del lancio",
       ],
-      action: "Scopri come si svolge lo sprint",
+      action: "Scopri come si svolge lo sviluppo",
       visual: (
         <div className="h-full rounded-xl bg-[#20271F] p-5 flex flex-col justify-between overflow-hidden">
           <div className="space-y-2">
@@ -71,7 +71,7 @@ export const StickyStackSection: React.FC<StickyStackProps> = ({ onOpenContact }
             </div>
             {[
               { label: "Layout homepage approvato", ok: true },
-              { label: "Calendario prenotazioni collegato", ok: true },
+              { label: "Modulo contatti & WhatsApp collegato", ok: true },
               { label: "Rifinitura mobile in corso", ok: false },
             ].map((row) => (
               <div key={row.label} className="flex items-center justify-between text-xs text-white/80 bg-[#FBF9F4]/5 rounded-lg px-3 py-2">
@@ -82,7 +82,7 @@ export const StickyStackSection: React.FC<StickyStackProps> = ({ onOpenContact }
               </div>
             ))}
           </div>
-          <div className="text-[11px] text-white/40 pt-3">Il tuo link privato si aggiorna ogni giorno.</div>
+          <div className="text-[11px] text-white/40 pt-3">Il tuo link privato si aggiorna in tempo reale.</div>
         </div>
       ),
     },
@@ -92,11 +92,11 @@ export const StickyStackSection: React.FC<StickyStackProps> = ({ onOpenContact }
       title: "Lancio, consegna e il sito è tuo al 100%",
       duration: "Giorno di lancio + supporto gratuito",
       description:
-        "Colleghiamo il tuo dominio, andiamo online e ti consegniamo tutto: codice, account e credenziali. Poi hai un periodo di supporto gratuito incluso per qualsiasi necessità o domanda.",
+        "Collego il tuo dominio, andiamo online e ti consegno tutto: codice sorgente, account e credenziali. Nessun canone nascosto o vincolo vincolante.",
       points: [
         "Proprietà al 100%: codice, dominio e ogni account",
-        "14–60 giorni di supporto gratuito in base al pacchetto",
-        "Video tutorial dedicato per gestire il sito in autonomia",
+        "14–60 giorni di assistenza inclusa in base al pacchetto",
+        "Guida pratica per gestire testi e immagini in autonomia",
       ],
       action: "Prenota la data di lancio",
       visual: (
@@ -107,9 +107,9 @@ export const StickyStackSection: React.FC<StickyStackProps> = ({ onOpenContact }
               <span className="text-[#0E8A5F]">Completato</span>
             </div>
             {[
-              "Dominio e hosting intestati a te",
+              "Dominio e hosting intestati direttamente a te",
               "Repository completo del codice sorgente",
-              "Video: come modificare il tuo sito",
+              "Guida: come aggiornare il tuo sito",
               "Periodo di assistenza attivato",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2.5 text-xs text-[#20271F] font-medium">
@@ -142,7 +142,7 @@ export const StickyStackSection: React.FC<StickyStackProps> = ({ onOpenContact }
         >
           <span className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#315B46]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#315B46]" />
-            Cosa facciamo per te
+            Come lavoro per te
           </span>
           <h2 className="text-3xl sm:text-5xl font-semibold tracking-[-0.02em] leading-[1.1] text-[#20271F]">
             Tre passaggi. Nessun gergo tecnico.
@@ -150,8 +150,8 @@ export const StickyStackSection: React.FC<StickyStackProps> = ({ onOpenContact }
             <span className="text-[#96998E]">Saprai sempre cosa succede dopo.</span>
           </h2>
           <p className="text-base sm:text-lg text-[#62695F] leading-relaxed max-w-2xl">
-            Tu ti occupi della tua attività; noi pensiamo al sito. Ecco l'intero percorso dalla prima chiamata al
-            giorno del lancio — e ciò che ricevi alla fine.
+            Tu ti occupi della tua attività a Messina; io penso al tuo sito web. Ecco il percorso trasparente
+            dalla prima chiacchierata al giorno del lancio online.
           </p>
         </motion.div>
 
